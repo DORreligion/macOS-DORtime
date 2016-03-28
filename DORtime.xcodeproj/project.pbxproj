@@ -7,12 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3B7176AC1BC15A2C00161B4C /* Calc.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B7176AB1BC15A2C00161B4C /* Calc.swift */; settings = {ASSET_TAGS = (); }; };
 		3BEA28BE1BC1266F001B285C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BEA28BD1BC1266F001B285C /* AppDelegate.swift */; };
 		3BEA28C01BC1266F001B285C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3BEA28BF1BC1266F001B285C /* Assets.xcassets */; };
 		3BEA28C31BC1266F001B285C /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3BEA28C11BC1266F001B285C /* MainMenu.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3B7176AB1BC15A2C00161B4C /* Calc.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Calc.swift; sourceTree = "<group>"; };
+		3B7176B11BC165DA00161B4C /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/MainMenu.strings; sourceTree = "<group>"; };
+		3BE7E4A01BC56EB700FC04E8 /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/MainMenu.strings; sourceTree = "<group>"; };
 		3BEA28BA1BC1266F001B285C /* DORtime.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DORtime.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3BEA28BD1BC1266F001B285C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3BEA28BF1BC1266F001B285C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -51,6 +55,7 @@
 			isa = PBXGroup;
 			children = (
 				3BEA28BD1BC1266F001B285C /* AppDelegate.swift */,
+				3B7176AB1BC15A2C00161B4C /* Calc.swift */,
 				3BEA28BF1BC1266F001B285C /* Assets.xcassets */,
 				3BEA28C11BC1266F001B285C /* MainMenu.xib */,
 				3BEA28C41BC1266F001B285C /* Info.plist */,
@@ -127,6 +132,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3B7176AC1BC15A2C00161B4C /* Calc.swift in Sources */,
 				3BEA28BE1BC1266F001B285C /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -138,6 +144,8 @@
 			isa = PBXVariantGroup;
 			children = (
 				3BEA28C21BC1266F001B285C /* Base */,
+				3B7176B11BC165DA00161B4C /* en */,
+				3BE7E4A01BC56EB700FC04E8 /* de */,
 			);
 			name = MainMenu.xib;
 			sourceTree = "<group>";
@@ -268,6 +276,7 @@
 				3BEA28C91BC1266F001B285C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
