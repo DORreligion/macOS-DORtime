@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		3B7176AC1BC15A2C00161B4C /* Calc.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B7176AB1BC15A2C00161B4C /* Calc.swift */; settings = {ASSET_TAGS = (); }; };
+		3B7176AC1BC15A2C00161B4C /* Calc.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B7176AB1BC15A2C00161B4C /* Calc.swift */; };
 		3BEA28BE1BC1266F001B285C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BEA28BD1BC1266F001B285C /* AppDelegate.swift */; };
 		3BEA28C01BC1266F001B285C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3BEA28BF1BC1266F001B285C /* Assets.xcassets */; };
 		3BEA28C31BC1266F001B285C /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3BEA28C11BC1266F001B285C /* MainMenu.xib */; };
@@ -94,6 +94,7 @@
 				TargetAttributes = {
 					3BEA28B91BC1266F001B285C = {
 						CreatedOnToolsVersion = 7.0.1;
+						DevelopmentTeam = 33J33UW323;
 					};
 				};
 			};
@@ -192,6 +193,7 @@
 				MACOSX_DEPLOYMENT_TARGET = 10.11;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
+				PROVISIONING_PROFILE = "2241a757-e060-45a9-9667-bc4882054ab5";
 				SDKROOT = macosx;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
@@ -229,6 +231,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				MACOSX_DEPLOYMENT_TARGET = 10.11;
 				MTL_ENABLE_DEBUG_INFO = NO;
+				PROVISIONING_PROFILE = "2241a757-e060-45a9-9667-bc4882054ab5";
 				SDKROOT = macosx;
 			};
 			name = Release;
@@ -237,11 +240,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "Developer ID Application";
 				COMBINE_HIDPI_IMAGES = YES;
 				INFOPLIST_FILE = DORtime/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = DOR.DORtime;
+				PRODUCT_BUNDLE_IDENTIFIER = dor.cappricorn.mac.dortime;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "2241a757-e060-45a9-9667-bc4882054ab5";
 			};
 			name = Debug;
 		};
@@ -249,11 +254,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "Developer ID Application";
 				COMBINE_HIDPI_IMAGES = YES;
 				INFOPLIST_FILE = DORtime/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = DOR.DORtime;
+				PRODUCT_BUNDLE_IDENTIFIER = dor.cappricorn.mac.dortime;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "2241a757-e060-45a9-9667-bc4882054ab5";
 			};
 			name = Release;
 		};
