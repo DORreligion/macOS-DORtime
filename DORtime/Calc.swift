@@ -10,9 +10,9 @@ import Foundation
 
 extension Int {
     var addSpaceSeparator:String {
-        let nf = NSNumberFormatter()
+        let nf = NumberFormatter()
         nf.groupingSeparator = "."
-        nf.numberStyle = NSNumberFormatterStyle.DecimalStyle
-        return nf.stringFromNumber(self)!
+        nf.numberStyle = NumberFormatter.Style.decimal
+        return nf.string(from: self as NSNumber)!
     }
 }

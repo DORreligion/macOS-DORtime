@@ -11,35 +11,43 @@ import Cocoa
 @NSApplicationMain
 class AppDelegate: NSObject, NSApplicationDelegate {
     
-    @IBOutlet weak var window: NSWindow!
+    //@IBOutlet weak var window: NSWindow!
     @IBOutlet weak var dorTime: NSMenu!
-    var timer = NSTimer()
+    var timer = Timer()
     
-    let statusItem = NSStatusBar.systemStatusBar().statusItemWithLength(-1)
+    let statusItem = NSStatusBar.system().statusItem(withLength: -1)
     
-    func applicationDidFinishLaunching(aNotification: NSNotification) {
+    func applicationDidFinishLaunching(_ notification: Notification) {
+        print("Klinger")
         let icon = NSImage(named: "dorunicorn")!
-        icon.template = true
+        icon.isTemplate = true
         
         statusItem.image = icon
-        statusItem.menu = dorTime
+        
+        let menu = NSMenu()
+        let menuItemCopy = NSMenuItem(title: "Copy", action: #selector(self.menuClicked), keyEquivalent: "c")
+        menu.addItem(menuItemCopy)
+        
+        let menuItemQuit = NSMenuItem(title: "Quit", action: #selector(AppDelegate.quit(_:)), keyEquivalent: "q")
+        menu.addItem(menuItemQuit)
+        
+        statusItem.menu = menu
         statusItem.length = NSVariableStatusItemLength
-        timer = NSTimer.scheduledTimerWithTimeInterval(0.1, target: self, selector: (#selector(AppDelegate.getDorTime)), userInfo: nil, repeats: true)
+        timer = Timer.scheduledTimer(timeInterval: 0.1, target: self, selector: (#selector(AppDelegate.getDorTime)), userInfo: nil, repeats: true)
     }
     
-    
-    @IBAction func menuClicked(sender: NSMenuItem) {
-        let pasteBoard = NSPasteboard.generalPasteboard()
+    func menuClicked() {
+        let pasteBoard = NSPasteboard.general()
         pasteBoard.clearContents()
         pasteBoard.writeObjects(NSArray(object: statusItem.title!) as! [NSPasteboardWriting])
     }
     
-    @IBAction func quitClicked(sender: NSMenuItem) {
-        exit(0)
+    func quit(_ sender:NSMenuItem) {
+        NSApplication.shared().terminate(self)
     }
     
     func getDorTime() {
-        let napTimeComp = NSDateComponents()
+        var napTimeComp = DateComponents()
         napTimeComp.year = 1821
         napTimeComp.month = 5
         napTimeComp.day = 6
@@ -47,7 +55,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         napTimeComp.minute = 14
         napTimeComp.second = 15
         
-        let grWiChan = NSDateComponents()
+        var grWiChan = DateComponents()
         grWiChan.year = 1893
         grWiChan.month = 4
         grWiChan.day = 1
@@ -55,16 +63,15 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         grWiChan.minute = 6
         grWiChan.second = 32
         
-        let napCal = NSCalendar.currentCalendar().dateFromComponents(napTimeComp)!.dateByAddingTimeInterval(0)
-        let grWiChanCal = NSCalendar.currentCalendar().dateFromComponents(grWiChan)!.dateByAddingTimeInterval(0)
+        let napCal = Calendar.current.date(from: napTimeComp)!.addingTimeInterval(0)
+        let grWiChanCal = Calendar.current.date(from: grWiChan)!.addingTimeInterval(0)
         
-        var dorTime = Int(NSDate().timeIntervalSinceDate(napCal))
-        if NSDate().isGreaterThanOrEqualTo(grWiChanCal) {
+        var dorTime = Int(Date().timeIntervalSince(napCal))
+        if NSDate().isGreaterThanOrEqual(to: grWiChanCal) {
             dorTime += 392
         }
-        let font = NSFont.monospacedDigitSystemFontOfSize(14.0, weight: NSFontWeightRegular)
+        let font = NSFont.monospacedDigitSystemFont(ofSize: 14.0, weight: NSFontWeightRegular)
         let attributedString = NSAttributedString(string: String(dorTime.addSpaceSeparator), attributes: [NSFontAttributeName: font])
         statusItem.attributedTitle = attributedString
     }
-    
 }
