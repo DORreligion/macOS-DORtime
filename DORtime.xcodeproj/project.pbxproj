@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3B3B1E1E1E20ACBC0074C363 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 3B3B1E201E20ACBC0074C363 /* Localizable.strings */; };
 		3B7176AC1BC15A2C00161B4C /* Calc.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B7176AB1BC15A2C00161B4C /* Calc.swift */; };
 		3BEA28BE1BC1266F001B285C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BEA28BD1BC1266F001B285C /* AppDelegate.swift */; };
 		3BEA28C01BC1266F001B285C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3BEA28BF1BC1266F001B285C /* Assets.xcassets */; };
@@ -14,6 +15,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3B3B1E1D1E20AB0E0074C363 /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/MainMenu.strings; sourceTree = "<group>"; };
+		3B3B1E1F1E20ACBC0074C363 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		3B3B1E211E20ACC60074C363 /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/Localizable.strings; sourceTree = "<group>"; };
 		3B7176AB1BC15A2C00161B4C /* Calc.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Calc.swift; sourceTree = "<group>"; };
 		3BEA28BA1BC1266F001B285C /* DORtime.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DORtime.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3BEA28BD1BC1266F001B285C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -52,6 +56,7 @@
 		3BEA28BC1BC1266F001B285C /* DORtime */ = {
 			isa = PBXGroup;
 			children = (
+				3B3B1E201E20ACBC0074C363 /* Localizable.strings */,
 				3BEA28BD1BC1266F001B285C /* AppDelegate.swift */,
 				3B7176AB1BC15A2C00161B4C /* Calc.swift */,
 				3BEA28BF1BC1266F001B285C /* Assets.xcassets */,
@@ -123,6 +128,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3BEA28C01BC1266F001B285C /* Assets.xcassets in Resources */,
+				3B3B1E1E1E20ACBC0074C363 /* Localizable.strings in Resources */,
 				3BEA28C31BC1266F001B285C /* MainMenu.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -142,10 +148,20 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
+		3B3B1E201E20ACBC0074C363 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3B3B1E1F1E20ACBC0074C363 /* en */,
+				3B3B1E211E20ACC60074C363 /* de */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
 		3BEA28C11BC1266F001B285C /* MainMenu.xib */ = {
 			isa = PBXVariantGroup;
 			children = (
 				3BEA28C21BC1266F001B285C /* Base */,
+				3B3B1E1D1E20AB0E0074C363 /* de */,
 			);
 			name = MainMenu.xib;
 			sourceTree = "<group>";

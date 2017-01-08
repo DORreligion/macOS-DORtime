@@ -1,0 +1,9 @@
+/* 
+  Localizable.strings
+  DORtime
+
+  Created by Lukas Schramm on 17-01-07.
+  Copyright © 2017 Lukas Schramm. All rights reserved.
+*/
+"COPY" = "Copy";
+"QUIT" = "Quit";

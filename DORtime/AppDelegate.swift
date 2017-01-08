@@ -11,24 +11,22 @@ import Cocoa
 @NSApplicationMain
 class AppDelegate: NSObject, NSApplicationDelegate {
     
-    //@IBOutlet weak var window: NSWindow!
     @IBOutlet weak var dorTime: NSMenu!
     var timer = Timer()
     
     let statusItem = NSStatusBar.system().statusItem(withLength: -1)
     
     func applicationDidFinishLaunching(_ notification: Notification) {
-        print("Klinger")
         let icon = NSImage(named: "dorunicorn")!
         icon.isTemplate = true
         
         statusItem.image = icon
         
         let menu = NSMenu()
-        let menuItemCopy = NSMenuItem(title: "Copy", action: #selector(self.menuClicked), keyEquivalent: "c")
+        let menuItemCopy = NSMenuItem(title: NSLocalizedString("COPY",value:"Copy",comment:""), action: #selector(self.menuClicked), keyEquivalent: "c")
         menu.addItem(menuItemCopy)
         
-        let menuItemQuit = NSMenuItem(title: "Quit", action: #selector(AppDelegate.quit(_:)), keyEquivalent: "q")
+        let menuItemQuit = NSMenuItem(title: NSLocalizedString("QUIT",value:"Quit",comment:""), action: #selector(AppDelegate.quit(_:)), keyEquivalent: "q")
         menu.addItem(menuItemQuit)
         
         statusItem.menu = menu

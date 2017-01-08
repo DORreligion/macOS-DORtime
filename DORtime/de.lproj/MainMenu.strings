@@ -1,9 +1,3 @@
 
-/* Class = "NSMenuItem"; title = "Quit"; ObjectID = "Dk2-2f-zlW"; */
-"Dk2-2f-zlW.title" = "Beenden";
-
-/* Class = "NSMenuItem"; title = "Copy"; ObjectID = "Jzf-Ll-mxz"; */
-"Jzf-Ll-mxz.title" = "Kopieren";
-
 /* Class = "NSMenu"; title = "DORtime"; ObjectID = "vn9-tN-Fbt"; */
 "vn9-tN-Fbt.title" = "DORtime";
